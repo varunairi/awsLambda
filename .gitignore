@@ -1,0 +1,6 @@
+target
+target/*
+dependency*
+.settings
+.project
+.classpath
