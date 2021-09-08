@@ -9,12 +9,15 @@
 *   The "Handler" class in initialized once so all initializations can be done in constructor, static block etc and then "handleRequest" method is run .
 
 
-## Branch: Simple
-Just takes in a simple String as an Event and gives out time of the day in a simple String.
-
-
-
-
+## Branch: CustomJSON
+Takes in a Custom JSON  (Jackson binding and nested request) and returns a response with a custom JSON As well.
+Request: {"age":30,
+    "name":{
+        "firstName":"Sylvester",
+        "middleName": "Rambo",
+        "lastName":"Stallone"
+    }
+}
 
 
 # Ways to update in AWS Lambda
