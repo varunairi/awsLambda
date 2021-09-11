@@ -11,6 +11,11 @@
 
 ## Branch: Using JSON as Maps and Lists in Request
 Takes in a Custom JSON   and maps to Java Types (automatic marshalling by AWS from JSON Input) and returns a response with a custom JSON As well.
+
+1.  Simple JSONs can map to Map<String,String/Integer etc>.
+2.  Simple JSONs with Array Values OR Simple Strings/Integers/Doubles can  map to Map<String,List<String>>
+3.	Jsons with nested JSONs map to Map<String,Map<String,String>>
+
 {"age":30,
     "Country": "US",
     "County":"LA",
