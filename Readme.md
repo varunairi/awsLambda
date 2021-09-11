@@ -9,15 +9,9 @@
 *   The "Handler" class in initialized once so all initializations can be done in constructor, static block etc and then "handleRequest" method is run .
 
 
-## Branch: CustomJSON
-Takes in a Custom JSON  (Jackson binding and nested request) and returns a response with a custom JSON As well.
-Request: {"age":30,
-    "name":{
-        "firstName":"Sylvester",
-        "middleName": "Rambo",
-        "lastName":"Stallone"
-    }
-}
+## Branch: environmentVariables
+Access runtime environments using System.getEnv (unencrypted)
+
 
 
 # Ways to update in AWS Lambda
