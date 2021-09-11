@@ -9,13 +9,15 @@
 *   The "Handler" class in initialized once so all initializations can be done in constructor, static block etc and then "handleRequest" method is run .
 
 
-## Branch: CustomJSON
-Takes in a Custom JSON  (Jackson binding and nested request) and returns a response with a custom JSON As well.
-Request: {"age":30,
-    "name":{
-        "firstName":"Sylvester",
-        "middleName": "Rambo",
-        "lastName":"Stallone"
+## Branch: Using JSON as Maps and Lists in Request
+Takes in a Custom JSON   and maps to Java Types (automatic marshalling by AWS from JSON Input) and returns a response with a custom JSON As well.
+{"age":30,
+    "Country": "US",
+    "County":"LA",
+    "name":["Sylvester","Rambo"],
+    "anotherName":{
+        "first": "Arnold",
+        "last":"Schwarzenegger"
     }
 }
 
