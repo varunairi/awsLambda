@@ -19,4 +19,5 @@ Access runtime environments using System.getEnv (unencrypted)
 1.  Using AWS Management Console:
 	  Login to the aws console and in Lambda console upload the JAR file. You also have to mention the entry method "handleRequest" and fully qualified name of the class.  
 2.  Using SAM:
+3.	Using AWS CLI: aws lambda update-function-code --function-name simple-http-endpoint --zip-file fileb://simpleawsserverless-dev-SNAPSHOT.jar --region us-east-2
 
