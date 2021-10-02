@@ -9,13 +9,12 @@
 *   The "Handler" class in initialized once so all initializations can be done in constructor, static block etc and then "handleRequest" method is run .
 
 
-## Branch: readSNSAndWriteSQS
-Access runtime environments using System.getEnv (unencrypted) to get SQS Queue NAme.
-The Lambda Expects an event from SNS , processes it and then sends it over SQS.
-Lambda needs execution roles over CloudWatch(if logging), SNS and SQS.
-Next SNS needs to have a trigger to invoke the Lambda. 
-
-
+## Branch: readAndWriteS3
+Triggered whenever a "PUT" is performed on a S3 bucket, an event is published to Lambda configured to react to it. This configuration is in Event Notification of S3. 
+A JSON with metadata and the details of action comes to Lambda as input (S3Event) and contains affected bucket, file name etc. 
+This code reads the bucket name from system env (although the same is available in Input S3eVent as well, reads the file name for which event has ben generated and then turns it into grayscale.
+Lambda then writes to another bucket.
+To get this to succeed Lambda needs a role with proper policies on S3. 
 
 # Ways to update in AWS Lambda
 
